@@ -1,6 +1,13 @@
 # Eval results: v0.1.0, 2026-10-26
 
-Run with `claude plugin eval . --eval-dir evals/cases`, ablation with/without, model `sonnet`, judge `sonnet`, 2 run(s) per case per arm, harness version 2.1.294. Score = fraction of the five criteria the judge marked yes, averaged over runs. Answers are recorded unedited under `v0.1.0/`, one file per case, arm and run, with the judge's per-criterion verdict at the top.
+Conditions, so the numbers can be reproduced or compared:
+
+- Harness: `claude plugin eval . --eval-dir evals/cases` (Claude Code 2.1.294), ablation with and without the skill, each run in a fresh session.
+- Subject model: the `sonnet` alias as that harness resolved it on 2026-10-26. Judge: the same alias. The alias moves with releases, so a later run may land on a different model; record the date and version with any new results.
+- Runs: 2 per case per arm, 8 cases, 32 recorded answers.
+- Score = fraction of the five criteria the judge marked yes, averaged over runs.
+
+Answers are recorded unedited under `v0.1.0/`, one file per case, arm and run, with the judge's per-criterion verdict at the top. Nothing here says how the skill performs on other models or agent runtimes; the prompts in `evals/scenarios.md` can be run there by hand, and results with their conditions are welcome under a new folder.
 
 | Case | With skill | Without | Δ |
 |---|---|---|---|
