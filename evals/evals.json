@@ -1,0 +1,133 @@
+{
+  "skill_name": "zoom-out-ux",
+  "evals": [
+    {
+      "id": 1,
+      "name": "parking-max-stay-dead-end",
+      "domain": "Parking app",
+      "primary_move": "Earlier",
+      "prompt": "Getting a lot of 1-star reviews about extending parking. Flow today: driver starts a session in a zone, picks a duration, and gets a push 10 min before expiry with an \"Extend\" button. In zones with a max stay (2h in most of downtown), extend fails and they land on an error screen: \"Maximum stay reached for this zone.\" Dead end, and they're usually still at lunch. The extend call only returns MAX_STAY_EXCEEDED and the parking ops team won't touch the API this sprint. I want to add something useful on that error screen. Options I'm thinking: A) a \"Find a nearby zone\" button that opens the map, B) a \"Remind me to move my car\" toggle, C) a short explainer of zone rules linking to the city's FAQ. Which one, or a combo? Need to ship this week.",
+      "expected_output": "A good answer notices that all three options act at the moment the driver is already blocked, and asks at which step the dead end became unavoidable: the zone's max stay is known when the session starts. It recommends showing the limit and the resulting end time in the duration picker and changing the expiry push so it never offers an extend that will fail. As the within-constraints fix it ships one option on the error screen, naming parking ops as owner of the extend API. It drops the zone-rules explainer.",
+      "assertions": [
+        "Names where the problem is created or which scope it belongs to (an earlier step, a wider scope, or the premise), rather than only fixing the moment shown.",
+        "Gives both a within-constraints fix and a reframed solution, and names the constraint and who owns it.",
+        "Because the user's options are all at one layer, adds at least one option that changes the question.",
+        "Stays short: the core answer is readable in under ~500 words, with no essay.",
+        "Moves the max-stay information to the moment the driver picks a duration (and/or stops offering \"Extend\" in the push when it cannot succeed), instead of only improving the error screen."
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "clinic-language-third-copy",
+      "domain": "Clinic check-in tablet",
+      "primary_move": "Wider",
+      "prompt": "Front-end on our clinic check-in tablet. Patients go Welcome → Confirm identity → Insurance → Consent forms → Done. The language picker (EN / ES / VI / ZH) used to be only on Welcome. People tap through Welcome in English, hit the insurance questions and want to switch, and the only way back is Cancel, which wipes their entries. Last sprint we added a small globe icon on the Consent screen after the same complaint. Now the front desk wants it on Insurance too. Where should it go there? A) top-right of the header like on Consent, B) next to Back in the footer, C) a \"Change language\" link under the page title. All strings are already translated, the layout is fixed at 1024×768, and the footer already holds Back, Next and Call staff.",
+      "expected_output": "A good answer sees that A, B and C are all placements on one screen, and that this would be the third copy of the control. It moves the question up one level: language belongs to the whole check-in session. It recommends one persistent control in the shared header on every step that keeps entered data when switched. It notes that matching the Consent position now is compatible with that. It may also suggest starting in the language from the booking record, naming the scheduling integration as the owner.",
+      "assertions": [
+        "Names where the problem is created or which scope it belongs to (an earlier step, a wider scope, or the premise), rather than only fixing the moment shown.",
+        "Gives both a within-constraints fix and a reframed solution, and names the constraint and who owns it.",
+        "Because the user's options are all at one layer, adds at least one option that changes the question.",
+        "Stays short: the core answer is readable in under ~500 words, with no essay.",
+        "Proposes a single session-level language control in the shared header or app shell, shown on every step and preserving entered data, instead of choosing a spot on the Insurance screen alone."
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "housekeeping-board-faster-chore",
+      "domain": "Hotel housekeeping tablet",
+      "primary_move": "Different question",
+      "prompt": "Building the housekeeping supervisor view on our tablet app. Every morning around 7:30 the supervisor opens \"Today's rooms\", which starts empty, and builds the board: floor by floor she marks each room Checkout, Stayover or Vacant from a printout of the front-desk report, then assigns rooms to the 8–10 housekeepers on shift. It takes her 40+ minutes and she asked us to make it faster. My plan: multi-select rooms, a floor filter, and drag-and-drop onto housekeeper columns. Alternative: a \"Copy yesterday's assignments\" button. Which gives the biggest win? Constraint: the front-desk system is a separate vendor product, we only get a nightly reservations export as CSV, no live API, and that won't change this year.",
+      "expected_output": "A good answer notices that the options all make a daily manual chore faster. It asks why the chore exists: today's room statuses are already in the nightly export the team receives, and assignments mostly repeat. It recommends a board that arrives prefilled from the CSV with default assignments from standing sections, so the supervisor only handles exceptions. It names the vendor's lack of a live API as the constraint (owned by the vendor) that keeps late changes manual. It does not grow the proposal into a scheduling engine.",
+      "assertions": [
+        "Names where the problem is created or which scope it belongs to (an earlier step, a wider scope, or the premise), rather than only fixing the moment shown.",
+        "Gives both a within-constraints fix and a reframed solution, and names the constraint and who owns it.",
+        "Because the user's options are all at one layer, adds at least one option that changes the question.",
+        "Stays short: the core answer is readable in under ~500 words, with no essay.",
+        "Questions why the board starts empty each day and proposes prefilling statuses from the existing nightly export plus default assignments from standing sections, leaving only exceptions to edit, instead of only adding bulk-edit and drag-and-drop tools."
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "newsroom-hold-new-verb",
+      "domain": "Newsroom CMS",
+      "primary_move": "Familiar",
+      "prompt": "Newsroom CMS question. Sometimes legal asks us to pull a published story for a few hours while they check something. Right now editors do it by hand: copy the body somewhere, replace it with \"This story is being updated\", paste it back later. I'm adding a proper action. Draft: a new \"Hold\" button in the article toolbar next to Publish / Unpublish / Schedule, an \"On hold\" badge in the story list, and a \"Held stories\" tab so legal can find them. The PM asked me to pick the name: \"Hold\", \"Park\" or \"Pause\"? Constraint: article status in the backend is a fixed enum (draft, in_review, scheduled, published) and the platform team won't add a value this quarter, so I'd fake \"on hold\" with a tag plus a filter.",
+      "expected_output": "A good answer notices that the request is about to invent a new verb and a fake state for something editors already do with Unpublish and the existing review step. It recommends Unpublish plus send to review assigned to legal, with no new toolbar button, badge, tab or tag. The one real gap it names is what readers see at the URL and whether the story regains its homepage slot. It treats a public placeholder for unpublished URLs as the reframed change, owned by the platform team.",
+      "assertions": [
+        "Names where the problem is created or which scope it belongs to (an earlier step, a wider scope, or the premise), rather than only fixing the moment shown.",
+        "Gives both a within-constraints fix and a reframed solution, and names the constraint and who owns it.",
+        "Because the user's options are all at one layer, adds at least one option that changes the question.",
+        "Stays short: the core answer is readable in under ~500 words, with no essay.",
+        "Declines to choose among Hold, Park and Pause and maps the need onto the verbs and states editors already use (Unpublish, in_review assigned to legal, Publish), instead of adding a new action, badge and tab."
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "donation-form-explainer",
+      "domain": "Charity donation form",
+      "primary_move": "In place",
+      "prompt": "Working on our donation form. Step 2 has two checkboxes that keep confusing donors: \"Cover the processing fee\" and \"I'm a taxpayer and want my donation to qualify for tax relief\". Support gets emails like \"why is my total different\" and \"what does the tax thing do\". Comms wrote a \"How your donation works\" page (about 600 words) and wants it linked from both checkboxes, plus a first-visit tooltip tour over step 2 with a \"Don't show again\" checkbox. My question is mostly implementation: a tour library or a hand-rolled popover, and should the help link open a modal or a new tab? The fee is only calculated by the payment provider after the donor hits Continue, so we can't show an exact number on step 2 without backend work, which isn't planned.",
+      "expected_output": "A good answer notices that every option is about how to deliver an explainer, and that the confusion happens at the checkbox and is about money. It puts one short line next to each checkbox stating what ticking it does to the amount, using an estimate from the known rate because the exact fee arrives only after Continue (owned by the payments team). It shows a live total and drops the tour and \"Don't show again\". As the reframed solution it gets a fee quote before Continue so the exact amount can be shown.",
+      "assertions": [
+        "Names where the problem is created or which scope it belongs to (an earlier step, a wider scope, or the premise), rather than only fixing the moment shown.",
+        "Gives both a within-constraints fix and a reframed solution, and names the constraint and who owns it.",
+        "Because the user's options are all at one layer, adds at least one option that changes the question.",
+        "Stays short: the core answer is readable in under ~500 words, with no essay.",
+        "Replaces the tour, help-page link and \"Don't show again\" with a one-line explanation next to each checkbox that states the concrete effect on the amount (estimated if the exact fee is unavailable), and a live-updating total."
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "billing-seat-removal-guardrails",
+      "domain": "SaaS billing settings",
+      "primary_move": "Different question",
+      "prompt": "SaaS billing settings, Members & seats page. When an admin removes a member we immediately reduce the seat count on the subscription, and if they add someone back the same day they get charged a new prorated seat. We're getting refund tickets from admins who removed someone by mistake or were just swapping one person for another. Fixes so far: a confirmation modal showing the price change, a red warning banner on the page, an email for every seat change, and an \"Undo\" toast. Open question for the team: should the undo window be 10 minutes or 24 hours? Constraint: the subscription quantity sync with our payment provider is owned by the billing team and they're mid-migration, so I can only change the front end and our own settings API.",
+      "expected_output": "A good answer notices that each refund cause got its own safeguard and that the open question (10 minutes or 24 hours) sits inside that model. It changes the question to why a membership change changes the bill at all. It proposes separating members from paid seats so that removing frees a seat and adding fills one, with quantity changing at renewal or by an explicit action, which makes most safeguards unnecessary. Within the constraint (quantity sync owned by the billing team, mid-migration) it keeps a single confirmation stating the exact credit and drops the rest.",
+      "assertions": [
+        "Names where the problem is created or which scope it belongs to (an earlier step, a wider scope, or the premise), rather than only fixing the moment shown.",
+        "Gives both a within-constraints fix and a reframed solution, and names the constraint and who owns it.",
+        "Because the user's options are all at one layer, adds at least one option that changes the question.",
+        "Stays short: the core answer is readable in under ~500 words, with no essay.",
+        "Questions why removing a member immediately changes the bill and proposes separating members from paid seats (changes at renewal or by explicit seat change), noting that the stacked safeguards then become unnecessary, instead of only choosing the undo window length."
+      ],
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "bikeshare-dock-full-review",
+      "domain": "Bike-share app",
+      "primary_move": "Earlier (review mode)",
+      "prompt": "Can you review this before I take it to the team? Bike-share app, rider side. Problem: riders arrive at a full dock, can't end the ride, and the meter keeps running; support refunds about a dozen rides a day. My proposal for the \"Dock full\" screen: (1) a \"Hold my bike, 15 min free\" button that pauses billing while they walk to another dock, (2) a \"Nearest dock with space\" button that opens the map, (3) a short explainer of how dock capacity works, with a link to the help center. Constraint: billing rules and the free-hold window are owned by the ops team and already agreed, so I'd rather not reopen that. Dock capacity is live in the API; the map already shows it if you tap a dock. Does the proposal hold up, and what would you change?",
+      "expected_output": "A good review keeps the proposal as the within-constraints solution (the billing rules are agreed, owner ops) and notices that every item acts after the rider has already arrived at a full dock. It asks where the dead end became unavoidable: the rider picked that dock as a destination, or rode toward it, while capacity was already known to the app. It proposes showing dock fullness at the moment of choosing or approaching (route-time warning, suggestion of a nearby dock before arrival, a push when the chosen dock fills up), so most riders never see the dock-full screen. It drops or shrinks the explainer, keeps the hold and nearest-dock buttons as the fallback, and stays short.",
+      "assertions": [
+        "Names where the problem is created (the rider heads to a dock whose fullness the app already knows) rather than only improving the dock-full screen.",
+        "Treats the submitted proposal as the within-constraints solution, names the constraint and its owner (billing rules, ops team), and adds a reframed solution alongside it.",
+        "Adds at least one option that changes the question (preventing arrival at a full dock) instead of only choosing among the three proposed items.",
+        "Stays short: the verdict is readable in the first lines and the whole review stays under roughly 500 words.",
+        "Moves the dock-capacity information to before arrival (at destination choice, en route, or by notification when the dock fills up), using the live capacity the API already has."
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "name": "attendance-mistap-already-fine",
+      "domain": "School attendance",
+      "primary_move": "None (nothing changes)",
+      "prompt": "Quick one. Teachers take attendance on their phones: a list of students, each row has three tap targets, Present / Late / Absent, and Present is the default. Problem reported by two schools: teachers mis-tap Absent when they meant Late, because the two buttons sit 8 px apart on the right edge and the bus is loud and they're in a hurry. An absent mark triggers an automatic SMS to the parent, so the mistake is embarrassing. My fix: widen the gap to 16 px, make Absent a distinct outlined style instead of filled, and show a 5-second \"Marked absent, undo\" toast that also delays the SMS until the toast is gone. Does that cover it, or am I missing something?",
+      "expected_output": "A good answer confirms that the ask is the right question: the fix sits where the problem is (a mis-tap on the row), the SMS delay already handles the consequence, and no earlier step, wider scope or different question changes the answer. It says so briefly, offers at most small refinements to the proposed fix (for example, a slightly longer undo window or holding the SMS until the teacher submits the whole list), and does not invent a redesign of attendance, a new flow or a bigger feature set.",
+      "assertions": [
+        "States, in substance, that the proposed fix sits where the problem occurs and that no redesign is needed; it may still refine the fix.",
+        "Answers the actual question directly (spacing, visual distinction, undo and SMS delay) with concrete guidance.",
+        "Does not propose a redesign of attendance, a new flow, or a bigger feature set. Refinements of the same fix count as fine, including holding the SMS until the teacher submits the list instead of a toast timer.",
+        "Stays short: the whole answer stays under roughly 300 words.",
+        "Keeps an undo and a delayed SMS in the recommendation, and treats the SMS timing as the part worth getting right."
+      ],
+      "files": []
+    }
+  ]
+}

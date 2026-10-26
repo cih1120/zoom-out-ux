@@ -1,0 +1,5 @@
+.DS_Store
+*.log
+evals/results/**/*.html
+evals/results/**/*.json
+node_modules/

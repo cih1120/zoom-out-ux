@@ -1,0 +1,11 @@
+{
+  "name": "zoom-out-ux",
+  "version": "0.1.0",
+  "description": "A skill that makes an AI zoom out before fixing a screen: find the step where the problem starts, the scope it belongs to, the word users already have, the place an action belongs, or the better question. Skill: zoom-out-ux.",
+  "author": {
+    "name": "cih1120"
+  },
+  "homepage": "https://github.com/cih1120/zoom-out-ux",
+  "license": "MIT",
+  "repository": "https://github.com/cih1120/zoom-out-ux"
+}

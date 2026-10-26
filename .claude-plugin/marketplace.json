@@ -1,0 +1,17 @@
+{
+  "name": "zoom-out-ux",
+  "description": "zoom-out-ux: a UI/UX skill that pulls an AI out of fixing inside the current screen.",
+  "owner": {
+    "name": "cih1120"
+  },
+  "plugins": [
+    {
+      "name": "zoom-out-ux",
+      "source": ".",
+      "description": "Five zoom-out moves, eight smells, a two-solution output, and worked cases. Skill: zoom-out-ux.",
+      "version": "0.1.0",
+      "category": "design",
+      "tags": ["ui", "ux", "design", "product", "review"]
+    }
+  ]
+}
