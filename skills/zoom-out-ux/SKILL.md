@@ -14,11 +14,12 @@ A smell means the work is still inside the frame. Check the draft (yours or the 
 - **Placement shopping**: every option answers "where does it go". Try Wider, then Different question.
 - **Third copy**: the same control, logic or wording needs a home on a third screen. Lay those screens side by side, then try Wider.
 - **Escape hatch**: the design adds a way out at the moment the user is blocked. Try Earlier.
+- **Prevented, not told**: the control is disabled, hidden or mutually locked so a rule can't be broken, and the user can't tell which rule or what would satisfy it. Try In place.
 - **Guardrail stacking**: each risk of the chosen model earns one more safeguard (bigger label, removable chip, extra confirm). Try Different question.
 - **Explainer**: a help page, long helper text, a tour, a "don't show again". Try In place.
 - **New verb**: a new action name for something users already do. Try Familiar.
 - **Faster chore**: a recurring manual task gets optimized without asking why it recurs. Try Different question.
-- **Status words**: the screen labels a result state ("visible", "hidden") instead of answering the relationship the user asks about ("where does this appear"). Try Different question.
+- **Status words**: the screen labels a result state ("visible", "hidden") instead of answering the relationship the user asks about ("where does this appear"), or answers it with a count or a truncated path ("manages 2", "… 3 levels …"). Try Different question.
 
 ## Five moves
 

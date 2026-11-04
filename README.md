@@ -18,9 +18,9 @@ Ask an AI to fix a piece of UI and it will usually fix it right there: a better 
 
 And one counter-move, **Zoom back in**: a changed question is not a license for a bigger feature set. Good reframes usually remove things.
 
-## Eight smells
+## Nine smells
 
-Signals that the work is still inside the frame: **placement shopping** (every option is "where to put it"), **third copy** (the same control needs a third home), **escape hatch** (an exit designed at the moment of being blocked), **guardrail stacking** (each risk gets one more safeguard), **explainer** (a help page is being added), **new verb** (a new name for something users already do), **faster chore** (a recurring task made faster, not questioned), **status words** (result states instead of the relationship users ask about). Each one points at the move to try first. See [`skills/zoom-out-ux/SKILL.md`](skills/zoom-out-ux/SKILL.md).
+Signals that the work is still inside the frame: **placement shopping** (every option is "where to put it"), **third copy** (the same control needs a third home), **escape hatch** (an exit designed at the moment of being blocked), **prevented, not told** (a control disabled or locked with no word on which rule or what would unlock it), **guardrail stacking** (each risk gets one more safeguard), **explainer** (a help page is being added), **new verb** (a new name for something users already do), **faster chore** (a recurring task made faster, not questioned), **status words** (result states, counts or truncated paths instead of the relationship users ask about). Each one points at the move to try first. See [`skills/zoom-out-ux/SKILL.md`](skills/zoom-out-ux/SKILL.md).
 
 ## Before / after
 

@@ -18,9 +18,9 @@
 
 還有一個反向動作 **Zoom back in**：題目換了，不代表可以做一個更大的功能。好的 reframe 通常是把東西拿掉。
 
-## 八個氣味
+## 九個氣味
 
-工作還在原本框框裡的訊號：placement shopping（選項全是「放哪」）、third copy（同一個東西要放第三頁）、escape hatch（在被擋住的那一刻設計出口）、guardrail stacking（每個風險各補一道防呆）、explainer（加說明頁）、new verb（發明新動作名）、faster chore（把重複的雜務做快）、status words（用結果狀態詞代替使用者真正問的關係）。每個氣味都指向先試哪個方向。見 [`skills/zoom-out-ux/SKILL.md`](skills/zoom-out-ux/SKILL.md)（skill 主文，英文）。
+工作還在原本框框裡的訊號：placement shopping（選項全是「放哪」）、third copy（同一個東西要放第三頁）、escape hatch（在被擋住的那一刻設計出口）、prevented, not told（控制項被停用或互鎖，卻不說是哪條規則、怎樣才能用）、guardrail stacking（每個風險各補一道防呆）、explainer（加說明頁）、new verb（發明新動作名）、faster chore（把重複的雜務做快）、status words（用結果狀態詞、數量或截短的路徑代替使用者真正問的關係）。每個氣味都指向先試哪個方向。見 [`skills/zoom-out-ux/SKILL.md`](skills/zoom-out-ux/SKILL.md)（skill 主文，英文）。
 
 ## Before / after
 

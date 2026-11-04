@@ -5,6 +5,14 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+### Added
+
+- Smell **Prevented, not told**: a control disabled, hidden or mutually locked with no word on which rule or what would satisfy it; try In place.
+
+### Changed
+
+- Smell **Status words** also covers a relationship answered with a count or a truncated path ("manages 2", "… 3 levels …").
+
 ## [0.1.0] - 2026-10-26
 
 ### Added
