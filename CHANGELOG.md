@@ -12,6 +12,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 ### Changed
 
 - Smell **Status words** also covers a relationship answered with a count or a truncated path ("manages 2", "… 3 levels …").
+- Move **Different question** also fires when a read-only object is being worked around: ask which operations are actually restricted, keep that restriction, and drop the model that extends it to unrelated actions; a correct model missing one button is a fix, not a reframe.
 
 ## [0.1.0] - 2026-10-26
 

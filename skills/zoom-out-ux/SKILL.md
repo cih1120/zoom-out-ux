@@ -29,7 +29,7 @@ Ask all five, one question each. Most come back empty; one or two change the ans
 - **Wider**: does this belong to this page, or to every page that asks the same question? It fires when one app-level element, shared panel or single policy replaces a set of per-page copies.
 - **Familiar**: does the user already have a verb, concept or control for this? It fires when a new action name, state or screen gives way to one users already know and use.
 - **In place**: is the action on the thing it acts on, and the explanation beside the control at the moment it matters? It fires when a hub page, a crowded action bar, a help page or a dismissible tip collapses back into the context it was pulled out of.
-- **Different question**: is the ask itself right? It fires when "how do we do this faster" turns into "why do this at all", or "how long should it remember" into "why remember", and the safeguards stacked on the old premise fall with it.
+- **Different question**: is the ask itself right? It fires when "how do we do this faster" becomes "why do this at all", "how long should it remember" becomes "why remember", or "how do we work around a read-only object" becomes "which operations are actually restricted"; the safeguards stacked on the old premise fall with it. Keep the real restriction; remove the model that extends it to unrelated actions. If the model is already correct and only a button is missing, fix the button; that is not a reframe.
 
 ## What to produce
 
