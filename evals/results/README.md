@@ -1,4 +1,39 @@
-# Eval results: v0.1.0, 2026-10-26
+# Eval results
+
+## Unreleased, 2026-11-22
+
+Conditions:
+
+- Harness: `claude plugin eval . --eval-dir evals/cases --runs 2 --judge-model sonnet --model sonnet` (Claude Code 2.1.330), ablation with and without the skill, each run in a fresh session. This harness version polls the judge three times per criterion and takes the majority; 0.1.0 had one verdict per criterion.
+- Subject and judge model: the `sonnet` alias as that harness resolved it on 2026-11-22.
+- Runs: 2 per case per arm, 8 cases, 32 recorded answers under `2026-11-22/`, plus attendance with-skill runs 3–6 from a second invocation of that scenario alone.
+- Same-day reference: the skill as of the previous commit (before this change), with-skill arm only, same command and runs.
+
+| Case | With skill | Without | Δ | Previous skill, same day | 0.1.0 with skill |
+|---|---|---|---|---|---|
+| attendance-mistap-already-fine | 0.60 | 0.60 | +0.00 | 0.50 | 0.10 |
+| bikeshare-dock-full-review | 0.90 | 0.60 | +0.30 | 0.90 | 0.90 |
+| billing-seat-removal-guardrails | 1.00 | 0.70 | +0.30 | 1.00 | 1.00 |
+| clinic-language-third-copy | 1.00 | 0.50 | +0.50 | 0.90 | 0.80 |
+| donation-form-explainer | 0.80 | 0.50 | +0.30 | 0.80 | 0.80 |
+| housekeeping-board-faster-chore | 1.00 | 0.80 | +0.20 | 0.90 | 0.80 |
+| newsroom-hold-new-verb | 0.80 | 0.30 | +0.50 | 0.80 | 0.70 |
+| parking-max-stay-dead-end | 1.00 | 0.60 | +0.40 | 1.00 | 1.00 |
+| **Mean** | **0.89** | **0.58** | **+0.31** | **0.85** | **0.76** |
+
+Per criterion, this run (share of runs marked yes):
+
+| Criterion | With skill | Without |
+|---|---|---|
+| 1-locates-origin | 0.94 | 0.75 |
+| 2-two-solutions | 0.94 | 0.19 |
+| 3-changes-question | 0.94 | 0.81 |
+| 4-concise | 0.94 | 0.69 |
+| 5-specific | 0.69 | 0.44 |
+
+The change targets the attendance scenario, the known weakness below. Its two runs here split 0.2 and 1.0. Four extra with-skill runs of that scenario alone, same conditions, scored 1.0, 1.0, 1.0 and 0.8; over the six runs the mean is 0.83, against 0.50 for the previous skill the same day. The failing run recognised the three changes as one fix and still appended a reframe. The other seven scenarios hold or rise, so the narrower "already right" rule did not block the reframes they expect. The judge's three-vote majority makes this run not directly comparable with the 0.1.0 numbers; compare within a date.
+
+## v0.1.0, 2026-10-26
 
 Conditions, so the numbers can be reproduced or compared:
 

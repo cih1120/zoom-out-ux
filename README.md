@@ -13,18 +13,18 @@ Ask an AI to fix a piece of UI and it will usually fix it right there: a better 
 | **Earlier** | At which step did this problem become unavoidable? Who should have known what, when? | The fix moves from the moment the user is blocked to the moment they make the choice. |
 | **Wider** | Does this belong to this page, or to every page that asks the same question? | One app-level element or one policy replaces a set of per-page copies. |
 | **Familiar** | Does the user already have a verb, concept or control for this? | A new action name or state gives way to one users already know. |
-| **In place** | Is the action on the thing it acts on, and the explanation beside the control when it matters? | A hub page, a crowded bar or a help page collapses back into its context. |
+| **In place** | Is the action on the thing it acts on, and the explanation beside the control when it matters? | A hub page, a crowded bar or a help page collapses back into its context, a control moves to the level it changes, or a label says what its explanation said. |
 | **Different question** | Is the ask itself right? | "How do we do this faster" turns into "why do this at all". |
 
 And one counter-move, **Zoom back in**: a changed question is not a license for a bigger feature set. Good reframes usually remove things.
 
 ## Nine smells
 
-Signals that the work is still inside the frame: **placement shopping** (every option is "where to put it"), **third copy** (the same control needs a third home), **escape hatch** (an exit designed at the moment of being blocked), **prevented, not told** (a control disabled or locked with no word on which rule or what would unlock it), **guardrail stacking** (each risk gets one more safeguard), **explainer** (a help page is being added), **new verb** (a new name for something users already do), **faster chore** (a recurring task made faster, not questioned), **status words** (result states, counts or truncated paths instead of the relationship users ask about). Each one points at the move to try first. See [`skills/zoom-out-ux/SKILL.md`](skills/zoom-out-ux/SKILL.md).
+Signals that the work is still inside the frame: **placement shopping** (every option is "where to put it"), **third copy** (the same control needs a third home, or one page says the same thing a third time), **escape hatch** (an exit designed at the moment of being blocked), **prevented, not told** (a control disabled or locked with no word on which rule or what would unlock it), **guardrail stacking** (each risk gets one more safeguard), **explainer** (a help page or a tooltip defining a label is being added), **new verb** (a new name for something users already do), **faster chore** (a recurring task made faster, not questioned), **status words** (result states, counts or truncated paths instead of the relationship users ask about). Each one points at the move to try first. See [`skills/zoom-out-ux/SKILL.md`](skills/zoom-out-ux/SKILL.md).
 
 ## Before / after
 
-Two of the five worked cases, in short. The full versions, with what was proposed first and the sentence that changed it, are in [`references/cases.md`](skills/zoom-out-ux/references/cases.md).
+Two of the six worked cases, in short. The full versions, with what was proposed first and the sentence that changed it, are in [`references/cases.md`](skills/zoom-out-ux/references/cases.md).
 
 **Expense reporting, one flagged line freezes the whole report.** A policy-exception flag sends the report to finance review for days, and approvers only find out after picking the flag type.
 *Inside the screen:* add "Release unflagged lines" to the report toolbar.

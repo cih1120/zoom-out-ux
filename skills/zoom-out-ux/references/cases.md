@@ -1,9 +1,9 @@
 # Worked cases
 
-Five cases that show a zoom-out end to end: the first draft, the move's question and what it found, the sentence that redirected the work, and what replaced what.
+Six cases that show a zoom-out end to end: the first draft, the move's question and what it found, the sentence that redirected the work, and what replaced what.
 They are composites written in invented domains; no product described here exists, and the numbers are placeholders.
 
-Index: 1. Report frozen by a flagged line (expense reporting) · 2. Logging from every screen (personal finance app) · 3. Remembering the serving size (recipe app) · 4. Who receives this notice (residents' community app) · 5. Printing menus and specials (restaurant admin)
+Index: 1. Report frozen by a flagged line (expense reporting) · 2. Logging from every screen (personal finance app) · 3. Remembering the serving size (recipe app) · 4. Who receives this notice (residents' community app) · 5. Printing menus and specials (restaurant admin) · 6. Saying it three times on one page (library staff app)
 
 ## 1. Report frozen by a flagged line (expense reporting)
 
@@ -128,3 +128,28 @@ A was built. Logging now sat in four places with four looks: a button on home, a
 - **Zoom back in.** The first reframed draft over-delivered: on top of the above it added a print queue, versions, reprint tracking and a print log. The reviewer removed those four and kept the rest. Zooming out changed the question; it did not license a bigger feature set.
 
 **Moves and smells.** Moves: Different question, Wider, Earlier. Smells: Faster chore, then the counter-move Zoom back in. Rule: follow the paper's whole life, not just the dialog; then cut the reframed answer back to what was asked, and list the extras as "also possible" outside the proposal.
+
+## 6. Saying it three times on one page (library staff app)
+
+**Setting.** The staff desktop page of a library app that lists holds: books reserved by members, waiting on the shelf for pickup. Top to bottom: a control bar with a date button ("Today") and a **Filter** button that opens a side panel; a row of chips for the active conditions; a strip of summary cards ("Waiting", "Expiring", "Collected") whose corner sentence reads "Based on current filters: Today · Search 'garden' · Matches 2"; then the table, whose toolbar holds a **Saved filters** menu, grouping and **Bulk actions**. In the filter panel, saved filters sit in the left column among the fields, above a "Current filters" list. The "Expiring" card has a four-sentence tooltip defining what expiring means.
+
+**The ask.** Four comments from one review: "The chip row and the summary sentence feel repetitive." "Saved filters in the panel are confusing." "I can't tell what 'Matches 2' means." "Bulk actions should rank above saved filters."
+
+**First draft.** One local fix per comment: shrink the summary sentence and set it inline with the chips; give saved filters in the panel an icon and a chip style; reword "Matches 2" as "2 holds in total" in the same spot; make the Saved filters button borderless so Bulk actions ranks higher. Each fix answers its comment, and the saved-filters question is only ever which spot and how loud.
+
+**Move questions, and what they found.**
+- Different question: the first comment is really "how many times does this page say what it is showing?" Three: the chips, the summary sentence repeating them, and the panel's "Current filters". The panel keeps its list, since that is where conditions are edited; on the page, one statement is enough, next to what it scopes.
+- In place: is each control at the level it changes? Saved filters swap the date, the conditions and the cards: the whole page, not the table. They belong in the control bar beside Filter; the table toolbar keeps only the view and the actions, and Bulk actions ranks highest there with no restyling. "Matches 2" counts table rows from the summary strip; the count belongs on the table. The "Expiring" tooltip explains a card name that could carry its own period.
+
+**The sentence that changed it.**
+> "How many times does this page say what it is showing, and which part of the page does each control change?"
+
+**What replaced what.**
+- Summary sentence → removed. The chip row is the scope, set directly above the cards, each chip removable and editable; with no conditions the row is gone.
+- "Matches 2" → "2 holds" at the left end of the table toolbar, the same number the pager shows.
+- "Expiring" → "Expiring today" (and "Expiring this week" when the date button says This week); the tooltip goes.
+- Saved filters → out of the table toolbar into the control bar; in the panel, a row of chips at the top of "Current filters" instead of an entry among the fields.
+- Two solutions: within constraints (bounded by the team's own earlier rule that every summary strip opens with a scope sentence; owner: this team, and the rule can change), the four local fixes. Reframed, the above. Cost: with no conditions set, the summary strip no longer says how many holds there are; the count lives in the table toolbar.
+- **Zoom back in.** The reviewer then asked whether saved filters needed their own entry on the page at all. They did not: they are applied from the filter panel, which already lists them. The control-bar entry went, leaving Filter as the one way into conditions. The move found the right home; the next question found the thing could go.
+
+**Moves and smells.** Moves: Different question, In place, then Zoom back in. Smells: Third copy (on one page), Placement shopping, Explainer. Rule: when one page states the same thing more than once, keep one statement beside what it describes; put each control at the level whose state it changes, then ask whether it still needs to exist.

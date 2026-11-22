@@ -13,18 +13,18 @@
 | **Earlier**（時間上游） | 問題是在哪一步變得無法避免的？誰該在哪個時間點知道什麼？ | 修補從「使用者被擋住的那一刻」移到「使用者做選擇的那一刻」。 |
 | **Wider**（範圍上層） | 這屬於這一頁，還是屬於每一個問同樣問題的頁面？ | 一個全域元件或一條 policy 取代一堆逐頁的複製品。 |
 | **Familiar**（既有心智模型） | 使用者已經有一個動詞、概念或控制項在做這件事嗎？ | 新發明的動作名或狀態，讓位給使用者本來就會的那個。 |
-| **In place**（回到所屬情境） | 動作在它作用的東西上嗎？說明在控制項旁、在需要的當下嗎？ | 集中頁、塞滿的底列、說明頁，縮回它們原本所屬的情境。 |
+| **In place**（回到所屬情境） | 動作在它作用的東西上嗎？說明在控制項旁、在需要的當下嗎？ | 集中頁、塞滿的底列、說明頁，縮回它們原本所屬的情境；控制項搬到它影響的那一層；或名稱自己說清楚，說明就不必存在。 |
 | **Different question**（換題目） | 題目本身對嗎？ | 「怎麼做快一點」變成「為什麼要做」。 |
 
 還有一個反向動作 **Zoom back in**：題目換了，不代表可以做一個更大的功能。好的 reframe 通常是把東西拿掉。
 
 ## 九個氣味
 
-工作還在原本框框裡的訊號：placement shopping（選項全是「放哪」）、third copy（同一個東西要放第三頁）、escape hatch（在被擋住的那一刻設計出口）、prevented, not told（控制項被停用或互鎖，卻不說是哪條規則、怎樣才能用）、guardrail stacking（每個風險各補一道防呆）、explainer（加說明頁）、new verb（發明新動作名）、faster chore（把重複的雜務做快）、status words（用結果狀態詞、數量或截短的路徑代替使用者真正問的關係）。每個氣味都指向先試哪個方向。見 [`skills/zoom-out-ux/SKILL.md`](skills/zoom-out-ux/SKILL.md)（skill 主文，英文）。
+工作還在原本框框裡的訊號：placement shopping（選項全是「放哪」）、third copy（同一個東西要放第三頁，或同一頁把同一件事講第三次）、escape hatch（在被擋住的那一刻設計出口）、prevented, not told（控制項被停用或互鎖，卻不說是哪條規則、怎樣才能用）、guardrail stacking（每個風險各補一道防呆）、explainer（加說明頁，或用 tooltip 解釋名稱）、new verb（發明新動作名）、faster chore（把重複的雜務做快）、status words（用結果狀態詞、數量或截短的路徑代替使用者真正問的關係）。每個氣味都指向先試哪個方向。見 [`skills/zoom-out-ux/SKILL.md`](skills/zoom-out-ux/SKILL.md)（skill 主文，英文）。
 
 ## Before / after
 
-五個案例裡的兩個，短版。完整版（含一開始的提案與改掉它的那句話）在 [`references/cases.md`](skills/zoom-out-ux/references/cases.md)。
+六個案例裡的兩個，短版。完整版（含一開始的提案與改掉它的那句話）在 [`references/cases.md`](skills/zoom-out-ux/references/cases.md)。
 
 **報帳審核，一條被標記的款項凍結整份報帳。** 標成「政策例外」會把整份報帳送財務審查好幾天，而審核者選標記類型時並不知道。
 *畫面內的解：* 報帳工具列多一顆「先放行未標記的款項」。
