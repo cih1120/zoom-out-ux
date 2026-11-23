@@ -24,7 +24,7 @@
 
 ## Before / after
 
-六個案例裡的兩個，短版。完整版（含一開始的提案與改掉它的那句話）在 [`references/cases.md`](skills/zoom-out-ux/references/cases.md)。
+七個案例裡的兩個，短版。完整版（含一開始的提案與改掉它的那句話）在 [`references/cases.md`](skills/zoom-out-ux/references/cases.md)。
 
 **報帳審核，一條被標記的款項凍結整份報帳。** 標成「政策例外」會把整份報帳送財務審查好幾天，而審核者選標記類型時並不知道。
 *畫面內的解：* 報帳工具列多一顆「先放行未標記的款項」。
@@ -36,7 +36,7 @@
 
 ## 有效嗎？
 
-`evals/` 有八個情境，領域和案例完全不重疊，每題在乾淨的 session 各跑一次有 skill、一次沒有 skill。輸出原樣記錄在 `evals/results/`，用五條評分標準逐條判讀。題目見 [`evals/scenarios.md`](evals/scenarios.md)，結果見 [`evals/results/README.md`](evals/results/README.md)。
+`evals/` 有九個情境，領域和案例不重疊（第 9 題和案例 5 同樣是餐廳，但問題不同），每題在乾淨的 session 各跑一次有 skill、一次沒有 skill。輸出原樣記錄在 `evals/results/`，用五條評分標準逐條判讀。題目見 [`evals/scenarios.md`](evals/scenarios.md)，結果見 [`evals/results/README.md`](evals/results/README.md)。
 
 ## 安裝
 

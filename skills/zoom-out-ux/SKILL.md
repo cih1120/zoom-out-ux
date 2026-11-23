@@ -57,7 +57,7 @@ When the user's fix works on a model that is already correct, at the step where 
 
 ## Worked cases
 
-`references/cases.md` holds six cases, each traced from the ask through the redirect to what replaced what. Read it when you want to see a move applied end to end, or when a smell is present but you can't name the zoomed-out question.
+`references/cases.md` holds seven cases, each traced from the ask through the redirect to what replaced what. Read it when you want to see a move applied end to end, or when a smell is present but you can't name the zoomed-out question.
 
 1. Report frozen by a flagged line (expense reporting): Earlier, Familiar, In place; Escape hatch, New verb; the two-solution output under a finance rule.
 2. Logging from every screen (personal finance app): Wider, Different question; Placement shopping, Third copy.
@@ -65,3 +65,4 @@ When the user's fix works on a model that is already correct, at the step where 
 4. Who receives this notice (residents' community app): Different question, Wider, In place; Status words, Third copy.
 5. Printing menus and specials (restaurant admin): Different question, Wider, Earlier; Faster chore, then the counter-move Zoom back in.
 6. Saying it three times on one page (library staff app): Different question, In place, then Zoom back in; Third copy, Placement shopping, Explainer.
+7. A car's history or a day's log (garage workshop app): Different question, Wider, In place, then Zoom back in; no smell fired.

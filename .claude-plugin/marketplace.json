@@ -8,7 +8,7 @@
     {
       "name": "zoom-out-ux",
       "source": ".",
-      "description": "Five zoom-out moves, eight smells, a two-solution output, and worked cases. Skill: zoom-out-ux.",
+      "description": "Five zoom-out moves, nine smells, a two-solution output, and worked cases. Skill: zoom-out-ux.",
       "version": "0.1.0",
       "category": "design",
       "tags": ["ui", "ux", "design", "product", "review"]

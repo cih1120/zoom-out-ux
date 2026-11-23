@@ -24,7 +24,7 @@ Signals that the work is still inside the frame: **placement shopping** (every o
 
 ## Before / after
 
-Two of the six worked cases, in short. The full versions, with what was proposed first and the sentence that changed it, are in [`references/cases.md`](skills/zoom-out-ux/references/cases.md).
+Two of the seven worked cases, in short. The full versions, with what was proposed first and the sentence that changed it, are in [`references/cases.md`](skills/zoom-out-ux/references/cases.md).
 
 **Expense reporting, one flagged line freezes the whole report.** A policy-exception flag sends the report to finance review for days, and approvers only find out after picking the flag type.
 *Inside the screen:* add "Release unflagged lines" to the report toolbar.
@@ -36,7 +36,7 @@ Two of the six worked cases, in short. The full versions, with what was proposed
 
 ## Does it work?
 
-`evals/` holds eight scenarios in domains the cases never touch, each run in a fresh session with and without the skill. The outputs are recorded as they came back, under `evals/results/`, and judged one criterion at a time against a five-check rubric. See [`evals/scenarios.md`](evals/scenarios.md) for the prompts and [`evals/results/README.md`](evals/results/README.md) for the scorecard.
+`evals/` holds nine scenarios in domains the cases never touch (scenario 9 shares the restaurant of case 5, not its problem), each run in a fresh session with and without the skill. The outputs are recorded as they came back, under `evals/results/`, and judged one criterion at a time against a five-check rubric. See [`evals/scenarios.md`](evals/scenarios.md) for the prompts and [`evals/results/README.md`](evals/results/README.md) for the scorecard.
 
 ## Install
 

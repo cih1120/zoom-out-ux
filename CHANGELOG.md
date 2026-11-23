@@ -9,6 +9,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 - Smell **Prevented, not told**: a control disabled, hidden or mutually locked with no word on which rule or what would satisfy it; try In place.
 - `references/cases.md` case 6, saying it three times on one page (library staff app): Third copy on one page, a control moved to the level it changes, an explanation replaced by the label, and the zoom-back-in question "does it still need to exist".
+- `references/cases.md` case 7, a car's history or a day's log (garage workshop app): two reports in one ask, told apart by what each reader decides; the object's history becomes a page about the object, reached from wherever it appears.
+- Eval scenario 9, `restaurant-noshow-already-fine`: a second request where nothing should change, in another domain, so the "already right" rule is not tuned to scenario 8.
 
 ### Changed
 

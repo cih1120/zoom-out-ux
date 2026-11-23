@@ -1,9 +1,9 @@
 # Worked cases
 
-Six cases that show a zoom-out end to end: the first draft, the move's question and what it found, the sentence that redirected the work, and what replaced what.
+Seven cases that show a zoom-out end to end: the first draft, the move's question and what it found, the sentence that redirected the work, and what replaced what.
 They are composites written in invented domains; no product described here exists, and the numbers are placeholders.
 
-Index: 1. Report frozen by a flagged line (expense reporting) · 2. Logging from every screen (personal finance app) · 3. Remembering the serving size (recipe app) · 4. Who receives this notice (residents' community app) · 5. Printing menus and specials (restaurant admin) · 6. Saying it three times on one page (library staff app)
+Index: 1. Report frozen by a flagged line (expense reporting) · 2. Logging from every screen (personal finance app) · 3. Remembering the serving size (recipe app) · 4. Who receives this notice (residents' community app) · 5. Printing menus and specials (restaurant admin) · 6. Saying it three times on one page (library staff app) · 7. A car's history or a day's log (garage workshop app)
 
 ## 1. Report frozen by a flagged line (expense reporting)
 
@@ -153,3 +153,29 @@ A was built. Logging now sat in four places with four looks: a button on home, a
 - **Zoom back in.** The reviewer then asked whether saved filters needed their own entry on the page at all. They did not: they are applied from the filter panel, which already lists them. The control-bar entry went, leaving Filter as the one way into conditions. The move found the right home; the next question found the thing could go.
 
 **Moves and smells.** Moves: Different question, In place, then Zoom back in. Smells: Third copy (on one page), Placement shopping, Explainer. Rule: when one page states the same thing more than once, keep one statement beside what it describes; put each control at the level whose state it changes, then ask whether it still needs to exist.
+
+## 7. A car's history or a day's log (garage workshop app)
+
+**Setting.** The office view of an independent garage's workshop app; only garage staff have logins. Its main page, Repairs, lists every repair line the mechanics log: plate, car model, the work done, mechanic, bay, parts, labor time. A date button ("This week") sets the period, a Group by menu groups the lines by day, by mechanic or by car, and Download saves the lines in view as a spreadsheet. Two other pages hold the rest of a car's record: Inspections (the yearly safety checks) and Parts orders, each filtered by plate. When the team built the app it set a rule that the office view has list pages only, each with a date button.
+
+**The ask.** From the owner: "Car owners, and people buying their cars from them, keep asking us for paperwork. I need to export one car's full service history quickly, or a daily report of what the workshop did."
+
+**First draft.** Both reports built on Repairs, since the lines are already there. The date button gets an "All time" option, so a car's history is not cut off at this week. Group by car gets a second level, one row per visit under each car, because a car's lines alone do not say which visit they came from. Download opens a menu that first asks which report: the lines, a car history or a daily report. Every step was locally sensible: no options were being compared, nothing was copied, nothing explained, so no smell pointed at a move.
+
+**Move questions, and what they found.**
+- Different question, asked as "who reads each report, and what do they decide with it?" The daily report is read by the owner at closing time, checking what the workshop did today: a period, the question Repairs already answers with Group by day and Download. The history is read by a car's owner or its buyer, who has no login, deciding whether this car was looked after: one car from its first visit to its last, with the dates following from the car. "All time" and the second level are a page scoped by a period stretching to hold an answer scoped by an object.
+- Wider: a car's history sits across three pages (repair lines, inspections, parts). It belongs to none of them.
+- In place: the way into a car's history is the plate itself, wherever a plate appears.
+
+**The sentence that changed it.**
+> "Who reads each report, and what do they decide with it?"
+
+**What replaced what.**
+- Daily report → unchanged. Group by day plus Download already is the daily report.
+- Car history → a page per car, opened from any plate on any page: a header (plate, model, first and last visit), then every visit in order with its repairs, checks and parts. It shows the whole history; Download saves this page, so the buyer gets the same thing the garage sees.
+- "All time", the second level under Group by car, and the report menu → gone.
+- Two solutions: within constraints (bounded by the team's own rule that the office view has list pages only; owner: this team, and the rule can change), the three additions to Repairs. Reframed, the above. Needs that rule changed; every line, check and part already carries the plate. Cost: a new kind of page.
+- Door: if the additions ship first, make each plate on Repairs a link to a history address that the new page takes over later, so only the destination changes.
+- **Zoom back in.** The first reframed draft added a Reports page linking to both reports. It went: each report already lives under the question it answers.
+
+**Moves and smells.** Moves: Different question, Wider, In place, then Zoom back in. Smells: none; the move came from asking who reads each report. Rule: when one ask bundles reports for different readers, ask what each reader decides; a period's log and one object's history have different scopes, and the object's history becomes a page about the object, reached from wherever the object appears.

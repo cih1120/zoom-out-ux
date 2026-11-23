@@ -1,5 +1,33 @@
 # Eval results
 
+## Unreleased, 2026-11-23
+
+Conditions:
+
+- Harness: `claude plugin eval . --eval-dir evals/cases --judge-model sonnet --model sonnet -j 4` (Claude Code 2.1.330), each run in a fresh session; the judge polls three times per criterion and takes the majority.
+- Subject and judge model: the `sonnet` alias as that harness resolved it on 2026-11-23.
+- Arms, all the same day:
+  - `with-skill`: the skill as committed (case 7 added to `references/cases.md`; `SKILL.md` changes only in the case list). Run on the two "already right" scenarios only, 6 runs each.
+  - `with-clause`: the same plus a clause in the Different question move ("an ask that bundles reports for different readers becomes 'who reads each one, and what do they decide with it'"). All nine scenarios, 2 runs each, plus 4 more on each "already right" scenario. The clause was not committed; see below.
+  - `without-skill`: no skill, 2 runs each.
+  - `previous-skill`: the skill at the previous commit, 2 runs each (4 on scenario 9).
+- 76 recorded answers under `2026-11-23/`.
+
+| Case | With skill | With clause | Without | Previous skill |
+|---|---|---|---|---|
+| attendance-mistap-already-fine | 0.97 (6) | 0.70 (6) | 0.50 | 0.90 |
+| restaurant-noshow-already-fine | 1.00 (6) | 0.73 (6) | 0.40 | 1.00 (4) |
+| bikeshare-dock-full-review | | 0.80 | 0.70 | 0.90 |
+| billing-seat-removal-guardrails | | 1.00 | 0.60 | 1.00 |
+| clinic-language-third-copy | | 0.90 | 0.60 | 1.00 |
+| donation-form-explainer | | 0.80 | 0.40 | 0.80 |
+| housekeeping-board-faster-chore | | 1.00 | 0.70 | 0.90 |
+| newsroom-hold-new-verb | | 0.80 | 0.30 | 0.80 |
+| parking-max-stay-dead-end | | 1.00 | 0.80 | 1.00 |
+| **Mean, nine cases** | | **0.84** | **0.56** | **0.92** |
+
+Reading the numbers: scenario 9 is new, a second request where nothing should change, so the "already right" rule is checked on more than one prompt; with the previous skill it scores 1.00 against 0.40 without. The Different question clause pulled both "already right" scenarios down: with it, answers again saw one fix and still appended a reframe through Guardrail stacking → Different question; without it, the same day, they score 0.97 and 1.00. The clause stays out of `SKILL.md`, and case 7 stays as a worked example. The seven other scenarios were not rerun on the committed text; it differs from the previous skill only in the case list and `references/cases.md`, so the previous-skill column stands in for them.
+
 ## Unreleased, 2026-11-22
 
 Conditions:
