@@ -11,6 +11,7 @@ Conditions:
   - `with-clause`: the same plus a clause in the Different question move ("an ask that bundles reports for different readers becomes 'who reads each one, and what do they decide with it'"). All nine scenarios, 2 runs each, plus 4 more on each "already right" scenario. The clause was not committed; see below.
   - `without-skill`: no skill, 2 runs each.
   - `previous-skill`: the skill at the previous commit, 2 runs each (4 on scenario 9).
+- The two extra arms ran through the same command, on a checkout of the previous commit (`previous-skill`) and on the committed tree with the clause added to `SKILL.md` and not committed (`with-clause`); runs per arm as listed.
 - 76 recorded answers under `2026-11-23/`.
 
 | Case | With skill | With clause | Without | Previous skill |
@@ -24,7 +25,7 @@ Conditions:
 | housekeeping-board-faster-chore | | 1.00 | 0.70 | 0.90 |
 | newsroom-hold-new-verb | | 0.80 | 0.30 | 0.80 |
 | parking-max-stay-dead-end | | 1.00 | 0.80 | 1.00 |
-| **Mean, nine cases** | | **0.84** | **0.56** | **0.92** |
+| **Mean, nine cases** | | **0.86** | **0.56** | **0.92** |
 
 Reading the numbers: scenario 9 is new, a second request where nothing should change, so the "already right" rule is checked on more than one prompt; with the previous skill it scores 1.00 against 0.40 without. The Different question clause pulled both "already right" scenarios down: with it, answers again saw one fix and still appended a reframe through Guardrail stacking → Different question; without it, the same day, they score 0.97 and 1.00. The clause stays out of `SKILL.md`, and case 7 stays as a worked example. The seven other scenarios were not rerun on the committed text; it differs from the previous skill only in the case list and `references/cases.md`, so the previous-skill column stands in for them.
 

@@ -36,7 +36,7 @@
 
 ## 有效嗎？
 
-`evals/` 有九個情境，領域和案例不重疊（第 9 題和案例 5 同樣是餐廳，但問題不同），每題在乾淨的 session 各跑一次有 skill、一次沒有 skill。輸出原樣記錄在 `evals/results/`，用五條評分標準逐條判讀。題目見 [`evals/scenarios.md`](evals/scenarios.md)，結果見 [`evals/results/README.md`](evals/results/README.md)。
+`evals/` 有九個情境，問題都和案例不重疊；只有第 9 題和案例 5 同樣是餐廳。每題都在乾淨的 session 裡，有 skill、沒有 skill 各跑一輪。輸出原樣記錄在 `evals/results/`，用五條評分標準逐條判讀。題目見 [`evals/scenarios.md`](evals/scenarios.md)，結果見 [`evals/results/README.md`](evals/results/README.md)。
 
 ## 安裝
 

@@ -1,6 +1,6 @@
 # zoom-out-ux eval scenarios
 
-These nine scenarios are realistic product requests where the obvious fix sits inside the screen shown and a better answer exists one step earlier, one level wider, or behind a different question.  
+These nine scenarios are realistic product requests. In seven of them the obvious fix sits inside the screen shown and a better answer exists one step earlier, one level wider, or behind a different question; in scenarios 8 and 9 the proposed fix is already right.  
 To run: `claude plugin eval . --eval-dir evals/cases` from the repo root runs every prompt in a fresh session twice, once with the skill and once without, and writes the scores under `evals/results/`. The same prompts can be pasted by hand into any other agent runtime.  
 Each output is graded against the rubric below, one criterion at a time, by a reader or by the harness's judge. Judge whether the answer reaches the idea; do not match wording or strings.  
 Each scenario targets one primary move or smell; scenario 7 is a review of a finished proposal, and scenarios 8 and 9 are requests where nothing should change. The reference answers are for the grader only. Never show them to the session under test.
@@ -207,7 +207,7 @@ A good answer confirms that the ask is the right question: the fix sits where th
 
 ## 9. restaurant-noshow-already-fine (Restaurant host stand)
 
-**Primary move:** none. A second "already right" request, in another domain, so the rule that fixed scenario 8 is not tuned to one prompt; written and added to the suite on 2026-11-23 (results in `results/2026-11-23/`), after an unrecorded holdout of the same shape on 2026-11-22. Its checks mirror scenario 8: 1 says the fix sits where the problem occurs and no redesign is needed (refinements allowed); 2 answers the actual question; 3 adds no redesign or new flow (holding the fee until the end of service, or a grace period past the booking time, counts as a refinement); 4 stays under ~300 words; 5 keeps an undo and a held fee.
+**Primary move:** none. A second "already right" request, in another domain, so the rule that fixed scenario 8 is not tuned to one prompt; written and added to the suite on 2026-11-23 (results in `results/2026-11-23/`). Its checks mirror scenario 8: 1 says the fix sits where the problem occurs and no redesign is needed (refinements allowed); 2 answers the actual question; 3 adds no redesign or new flow (holding the fee until the end of service, until the host reviews the night's no-shows, or until a grace period past the booking time has passed, counts as a refinement); 4 stays under ~300 words; 5 keeps an undo and a held fee.
 
 > Sanity check before I hand this off. Our host-stand tablet lists tonight's reservations; each row has two buttons on the right, Seat and No-show, side by side. During the Friday rush, with guests crowding the stand, hosts sometimes tap No-show when they meant Seat. No-show automatically charges the card on file a $25 no-show fee, so a mis-tap charges a guest who is already sitting at their table. My fix: move No-show away from Seat into its own red button at the left end of the row, show an 8-second "Marked no-show, undo" toast, and hold the fee so the card is only charged once the toast is gone. Does that cover it, or am I missing something?
 

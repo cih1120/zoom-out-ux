@@ -36,7 +36,7 @@ Two of the seven worked cases, in short. The full versions, with what was propos
 
 ## Does it work?
 
-`evals/` holds nine scenarios in domains the cases never touch (scenario 9 shares the restaurant of case 5, not its problem), each run in a fresh session with and without the skill. The outputs are recorded as they came back, under `evals/results/`, and judged one criterion at a time against a five-check rubric. See [`evals/scenarios.md`](evals/scenarios.md) for the prompts and [`evals/results/README.md`](evals/results/README.md) for the scorecard.
+`evals/` holds nine scenarios whose problems the cases never touch; only scenario 9 shares a domain, the restaurant of case 5. Each is run in a fresh session with and without the skill. The outputs are recorded as they came back, under `evals/results/`, and judged one criterion at a time against a five-check rubric. See [`evals/scenarios.md`](evals/scenarios.md) for the prompts and [`evals/results/README.md`](evals/results/README.md) for the scorecard.
 
 ## Install
 
